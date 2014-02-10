@@ -78,24 +78,26 @@ void MagDecode::processSwipe() {
 
 	ms_save( ms, "/home/ieatlint/code/SWipe/tests/x" );
 
-	ms_decode_peaks( ms  );
+    ms_decode_peaks( ms  );
 
-	valid = ( ms_decode_bits( ms ) == 0 );
-	
-	MagCard card;
-	card.charStream = ms_get_charStream( ms );
-	card.bitStream = ms_get_bitStream( ms );
-	card.encoding = ms->dataType;
-	card.swipeValid = valid;
+    valid = ( ms_decode_bits( ms ) == 0 );
+
+    MagCard card;
+    card.charStream = ms_get_charStream( ms );
+    card.bitStream = ms_get_bitStream( ms );
+    card.encoding = ms->dataType;
+    card.swipeValid = valid;
 
 	emit cardRead( card );
 	noiseDetected = false;
 	silenceCount = 0;
 	captureAudio = true;
 	
-//	qDebug() << "Card Validity:" << valid;
-//	qDebug() << "Chars:" << ms_get_charStream( ms );
-//	qDebug() << "Bits:" << ms_get_bitStream( ms );
+    /* See all the debug streams!  Also copy pasting digits*/
+
+    qDebug() << "Card Validity:" << valid;
+    qDebug() << "Chars:" << ms_get_charStream( ms );
+    qDebug() << "Bits:" << ms_get_bitStream( ms );
 	
 	ms = ms_free( ms );
 

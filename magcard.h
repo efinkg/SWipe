@@ -73,13 +73,13 @@ class MagCard {
                         accountNumber.clear();
                         accountHolder.clear();
                         accountIssuer.clear();
-                        expirationDate = QDate::QDate();
+                        expirationDate = QDate();  /*QDate::QDate is deprecated*/
                         miscData.clear();
                         accountValid = false;
                         aamvaIssuer.clear();
                         aamvaIssuerName.clear();
                         aamvaIssuerAbr.clear();
-                        aamvaBirthday = QDate::QDate();
+                        aamvaBirthday = QDate();
                         aamvaAge = 0;
                 }
 

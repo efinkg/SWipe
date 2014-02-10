@@ -8,6 +8,7 @@ QT       += core gui multimedia
 
 TARGET = SWipe
 TEMPLATE = app
+QT += gui declarative #QT5 has different GUI commands
 
 
 SOURCES += main.cpp\

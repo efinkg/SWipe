@@ -12,5 +12,7 @@ qmake && make
 
 You may also open the project file in Qt Creator to build.
 
+Updated version has been reworked due to deprecated C code.
+
 http://blog.tehinterweb.com/
 

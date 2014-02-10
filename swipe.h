@@ -1,7 +1,7 @@
 #ifndef MAGSTRIPE_H
 #define MAGSTRIPE_H
 
-#include <QtGui/QMainWindow>
+#include <QMainWindow>  //<QtGui/QMainWindow> is deprecated
 #include <QLabel>
 #include <QPushButton>
 #include <QVBoxLayout>
